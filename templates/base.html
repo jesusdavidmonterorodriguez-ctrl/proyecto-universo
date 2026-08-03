@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>proyecto flask</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css')}}">
+
+
+</head>
+
+<body>
+    <h1>mi proyecto</h1>
+
+    <a href="{{ url_for('inicio')}}">inicio</a>
+
+    <a href="{{ url_for('contactos')}}">contactos</a>
+
+    <a href="{{ url_for('nosotros')}}">nosotros</a>
+
+    <a href="{{ url_for('perfil')}}">perfil</a>
+    
+    <hr>
+    {% block contenido %}
+    {% endblock %}
+
+    <hr>
+    <footer>
+        <p>proyecto creado por cristian David Montero</p>
+
+    </footer>
+
+</body>
+
+</html>
